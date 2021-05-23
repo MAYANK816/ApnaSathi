@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity2">
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navmenu"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/navheader"
+        app:menu="@menu/main_menu" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="@drawable/ic_baseline_menu_24"
+                app:title="Welcome"
+                app:titleTextColor="@color/mainbackground" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:padding="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:padding="15dp"
+                    android:text="All Events"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/event_recycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:columnCount="1"
+                    app:rowCount="4">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/buysell"
+                        android:layout_width="400dp"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="30dp"
+                        android:foregroundGravity="center"
+                        app:cardCornerRadius="30px"
+                        android:onClick="buysell"
+                        app:layout_column="0"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:layout_row="0"
+                        app:layout_rowWeight="1">
+
+                        <LinearLayout
+                            android:id="@+id/linear"
+                            android:layout_width="379dp"
+                            android:background="@color/mainbackground"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="20dp"
+                                android:src="@drawable/farmericon"></ImageView>
+
+                            <TextView
+                                android:id="@+id/internshiprcv"
+                                android:layout_width="200dp"
+                                android:layout_height="70dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="50dp"
+                                android:text="BUY / SELL"
+                                android:textColor="#040404"
+                                android:textSize="25sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cropcertify"
+                        android:layout_width="400dp"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="30dp"
+                        android:onClick="cropverify"
+                        app:cardCornerRadius="30px"
+                        app:layout_column="0"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:layout_row="1"
+                        app:layout_rowWeight="1">
+
+                        <LinearLayout
+                            android:id="@+id/linear1"
+                            android:layout_width="379dp"
+                            android:background="@color/mainbackground"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="20dp"
+                                android:src="@drawable/farmericon"></ImageView>
+
+                            <TextView
+                                android:id="@+id/interview"
+                                android:layout_width="200dp"
+                                android:layout_height="70dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="50dp"
+                                android:text="GET YOUR CROP CERTIFIED"
+                                android:textColor="#040404"
+                                android:textSize="25sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cropinsure"
+                        android:layout_width="400dp"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="30dp"
+                        app:cardCornerRadius="30px"
+                        android:onClick="cropInsurance"
+                        app:layout_column="0"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:layout_row="2"
+                        app:layout_rowWeight="1">
+
+                        <LinearLayout
+                            android:id="@+id/linear2"
+                            android:layout_width="379dp"
+                            android:background="@color/mainbackground"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="20dp"
+                                android:src="@drawable/farmericon"></ImageView>
+
+                            <TextView
+                                android:id="@+id/developer"
+                                android:layout_width="200dp"
+                                android:layout_height="70dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="50dp"
+                                android:text="CROP INSURANCE"
+                                android:textColor="#040404"
+                                android:textSize="25sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/expertadvice"
+                        android:layout_width="400dp"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="30dp"
+                        android:onClick="expertAdvice"
+                        app:cardCornerRadius="30px"
+                        app:layout_column="0"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:layout_row="3"
+                        app:layout_rowWeight="1">
+
+                        <LinearLayout
+                            android:id="@+id/linear3"
+                            android:layout_width="379dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/mainbackground"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="20dp"
+                                android:src="@drawable/farmericon"></ImageView>
+
+                            <TextView
+                                android:id="@+id/book"
+                                android:layout_width="200dp"
+                                android:layout_height="70dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginTop="50dp"
+                                android:text="EXPERT ADVICE"
+                                android:textColor="#040404"
+                                android:textSize="25sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </androidx.gridlayout.widget.GridLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

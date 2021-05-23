@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "913200617022",
+    "project_id": "apnasathi-42d2f",
+    "storage_bucket": "apnasathi-42d2f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:913200617022:android:0a1f7114a921740d62a36f",
+        "android_client_info": {
+          "package_name": "com.example.apnasathi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "913200617022-nc8t9iaegka051t6jj76thpom1lgrgsv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADQdwTveuPd4kt6cGCi8yFs8urFPY5aRU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "913200617022-nc8t9iaegka051t6jj76thpom1lgrgsv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

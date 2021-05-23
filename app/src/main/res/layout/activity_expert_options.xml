@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:context=".ExpertOptions"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:padding="20dp">
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:columnCount="1"
+
+        app:rowCount="4">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/oncall"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:foregroundGravity="center"
+        app:cardCornerRadius="30px"
+        app:layout_column="0"
+        android:onClick="callExpert"
+        app:layout_columnWeight="1"
+        app:layout_gravity="fill"
+        app:layout_row="0"
+        app:layout_rowWeight="1">
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="wrap_content"
+            android:background="@color/mainbackground"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/experts"></ImageView>
+
+            <TextView
+                android:id="@+id/callNow"
+                android:layout_width="200dp"
+                android:layout_height="70dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="50dp"
+                android:text="Call Expert"
+                android:textColor="#040404"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/submitQuery"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_marginTop="30dp"
+            android:foregroundGravity="center"
+            app:cardCornerRadius="30px"
+            app:layout_column="0"
+            android:onClick="expertQuery"
+            app:layout_columnWeight="1"
+            app:layout_gravity="fill"
+            app:layout_row="1"
+            app:layout_rowWeight="1">
+
+            <LinearLayout
+                android:id="@+id/linear2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/mainbackground"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/clipboard"></ImageView>
+
+                <TextView
+                    android:id="@+id/submitquery"
+                    android:layout_width="200dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="50dp"
+                    android:text="Submit Query"
+                    android:textColor="#040404"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.gridlayout.widget.GridLayout>
+
+</LinearLayout>
